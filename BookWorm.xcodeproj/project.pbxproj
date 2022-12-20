@@ -14,6 +14,10 @@
 		852DA2DB295268EF000DBB7A /* BookWormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DA2DA295268EF000DBB7A /* BookWormTests.swift */; };
 		852DA2E5295268EF000DBB7A /* BookWormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DA2E4295268EF000DBB7A /* BookWormUITests.swift */; };
 		852DA2E7295268EF000DBB7A /* BookWormUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DA2E6295268EF000DBB7A /* BookWormUITestsLaunchTests.swift */; };
+		852DA2F429526932000DBB7A /* DataControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DA2F329526932000DBB7A /* DataControler.swift */; };
+		852DA2F829526977000DBB7A /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DA2F729526977000DBB7A /* AddBookView.swift */; };
+		852DA2FA2952699A000DBB7A /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DA2F92952699A000DBB7A /* EmojiRatingView.swift */; };
+		852DA2FC295269B7000DBB7A /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DA2FB295269B7000DBB7A /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		852DA2E0295268EF000DBB7A /* BookWormUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookWormUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		852DA2E4295268EF000DBB7A /* BookWormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookWormUITests.swift; sourceTree = "<group>"; };
 		852DA2E6295268EF000DBB7A /* BookWormUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookWormUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		852DA2F329526932000DBB7A /* DataControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControler.swift; sourceTree = "<group>"; };
+		852DA2F729526977000DBB7A /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		852DA2F92952699A000DBB7A /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		852DA2FB295269B7000DBB7A /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +103,9 @@
 		852DA2C7295268ED000DBB7A /* BookWorm */ = {
 			isa = PBXGroup;
 			children = (
+				852DA2F629526951000DBB7A /* Views */,
+				852DA2F52952693D000DBB7A /* Model */,
 				852DA2C8295268ED000DBB7A /* BookWormApp.swift */,
-				852DA2CA295268ED000DBB7A /* ContentView.swift */,
 				852DA2CC295268EF000DBB7A /* Assets.xcassets */,
 				852DA2CE295268EF000DBB7A /* BookWorm.entitlements */,
 				852DA2CF295268EF000DBB7A /* Preview Content */,
@@ -127,6 +136,25 @@
 				852DA2E6295268EF000DBB7A /* BookWormUITestsLaunchTests.swift */,
 			);
 			path = BookWormUITests;
+			sourceTree = "<group>";
+		};
+		852DA2F52952693D000DBB7A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				852DA2F329526932000DBB7A /* DataControler.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		852DA2F629526951000DBB7A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				852DA2CA295268ED000DBB7A /* ContentView.swift */,
+				852DA2F729526977000DBB7A /* AddBookView.swift */,
+				852DA2F92952699A000DBB7A /* EmojiRatingView.swift */,
+				852DA2FB295269B7000DBB7A /* RatingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				852DA2FA2952699A000DBB7A /* EmojiRatingView.swift in Sources */,
 				852DA2CB295268ED000DBB7A /* ContentView.swift in Sources */,
+				852DA2F429526932000DBB7A /* DataControler.swift in Sources */,
+				852DA2FC295269B7000DBB7A /* RatingView.swift in Sources */,
 				852DA2C9295268ED000DBB7A /* BookWormApp.swift in Sources */,
+				852DA2F829526977000DBB7A /* AddBookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
