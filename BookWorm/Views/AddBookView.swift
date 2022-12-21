@@ -2,7 +2,7 @@
 //  AddBookView.swift
 //  BookWorm
 //
-//  Created by Orlando Moraes Martins on 20/12/22.
+//  Created by Orlando Moraes Martins on 21/12/22.
 //
 
 import SwiftUI
@@ -50,6 +50,7 @@ struct AddBookView: View {
                         newBook.rating = Int16(rating)
                         newBook.genre = genre
                         newBook.review = review
+                        newBook.date = Date.now
                         
                         try? moc.save()
                         dismiss()

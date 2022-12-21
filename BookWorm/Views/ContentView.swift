@@ -7,53 +7,68 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var books: FetchedResults<Book>
+    @FetchRequest(sortDescriptors: [
+        SortDescriptor(\.title),
+        SortDescriptor(\.author)
+    ]) var books: FetchedResults<Book>
     
     @State private var showingAddScreen = false
 
     var body: some View {
         NavigationView {
             List{
-                ForEach (books) { book in
+                ForEach(books){ book in
                     NavigationLink{
-                        Text(book.title ?? "Unknown Title" )
+                        DetailView(book: book)
                     } label: {
                         HStack{
                             EmojiRatingView(rating: book.rating)
                                 .font(.largeTitle)
-                            
-                            VStack (alignment: .leading){
-                                Text(book.title ?? "Unknown title")
+
+                            VStack(alignment: .leading){
+                                Text(book.title ?? "Unknown Title")
                                     .font(.headline)
-                                
+
                                 Text(book.author ?? "Unknown Author")
                                     .foregroundColor(.secondary)
                             }
+                            .listRowBackground(book.rating == 1 ? Color.red : Color(UIColor.systemGroupedBackground))
                         }
+                    }
+                }
+                .onDelete(perform: deleteBooks)
+            }
+            .navigationTitle("Bookmark")
+            .toolbar{
+                ToolbarItem(placement: .navigationBarLeading){
+                        EditButton()
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button{
+                        showingAddScreen.toggle()
+                    }label: {
+                        Label("Add Book", systemImage: "plus")
                     }
                 }
             }
-            Text("Count: \(books.count)")
-                .navigationTitle("Bookworm")
-                .toolbar{
-                    ToolbarItem(placement: .navigationBarTrailing){
-                        Button{
-                            showingAddScreen.toggle()
-                        } label :{
-                            Text("Add Book", systemImage: "plus")
-                        }
-                    }
-                }
-                .sheet(ispresented:$showingAddScreen){
-                    AddBookView()
-                }
+            .sheet(isPresented: $showingAddScreen) {
+                AddBookView()
+            }
         }
     }
+    func deleteBooks (at offsets: IndexSet){
+        for offset in offsets {
+            let book = books[offset]
+            moc.delete(book)
+        }
+        
+        try? moc.save()
+    }
 }
+
 
 
 struct ContentView_Previews: PreviewProvider {
