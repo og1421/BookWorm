@@ -20,6 +20,7 @@
 		852DA2F429526932000DBB7A /* DataControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DA2F329526932000DBB7A /* DataControler.swift */; };
 		852DA2FA2952699A000DBB7A /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DA2F92952699A000DBB7A /* EmojiRatingView.swift */; };
 		852DA2FC295269B7000DBB7A /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DA2FB295269B7000DBB7A /* RatingView.swift */; };
+		8547F2A32964A63500B1E3E5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8547F2A22964A63500B1E3E5 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		852DA2F329526932000DBB7A /* DataControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControler.swift; sourceTree = "<group>"; };
 		852DA2F92952699A000DBB7A /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 		852DA2FB295269B7000DBB7A /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		8547F2A22964A63500B1E3E5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				852DA2F329526932000DBB7A /* DataControler.swift */,
+				8547F2A22964A63500B1E3E5 /* Persistence.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8547F2A32964A63500B1E3E5 /* Persistence.swift in Sources */,
 				851C41612953A414009848F0 /* AddBookView.swift in Sources */,
 				851C41632953A59D009848F0 /* DetailView.swift in Sources */,
 				852DA2FA2952699A000DBB7A /* EmojiRatingView.swift in Sources */,
